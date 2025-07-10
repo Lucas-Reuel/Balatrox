@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Balatro Multiplayer - Jogo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="deckCount">Cartas no baralho: <span id="deckSize">0</span></div>
+
+  <div class="sidebar">
+    <div>
+      <div class="info-box">
+        <h2>Combinação</h2>
+        <span id="comboName">-</span>
+      </div>
+      <div class="info-box">
+        <h2>Fichas</h2>
+        <span id="comboValue">0</span> × <span id="comboMult">1</span>
+      </div>
+      <div class="info-box">
+        <h2>Mãos</h2>
+        <span id="handNum">1</span>
+      </div>
+      <div class="info-box">
+        <h2>Descartes</h2>
+        <span id="discardsLeft">3</span>
+      </div>
+      <div class="info-box">
+        <h2>Total</h2>
+        <span id="totalPoints">$0</span>
+      </div>
+    </div>
+    <div>
+      <button class="orange" onclick="toggleSort()">Ordenar</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div id="hand"></div>
+    <div class="controls">
+      <button class="blue" onclick="playHand()">Jogar Mão</button>
+      <button class="red" onclick="discardSelected()">Descartar</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

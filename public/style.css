@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background: radial-gradient(#164a2e, #0f3b25);
+  color: #fff;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Lado esquerdo (painel de info) */
+.sidebar {
+  width: 250px;
+  background: #1a1a1a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h2 {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.info-box {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+}
+
+.info-box span {
+  font-size: 16px;
+  color: #0ff;
+}
+
+/* Painel principal */
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Cartas */
+#hand {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 8px;
+}
+
+#deckCount {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #000;
+  color: #0ff;
+  font-size: 12px;
+  font-family: 'Press Start 2P', monospace;
+  padding: 10px;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  opacity: 0.85;
+  z-index: 999;
+}
+
+
+.card {
+  background: white;
+  color: black;
+  width: 70px;
+  height: 100px;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.selected {
+  border-color: red;
+  background-color: #ffcccc;
+}
+
+/* Botões */
+button {
+  padding: 10px 20px;
+  font-size: 12px;
+  margin: 5px;
+  font-family: 'Press Start 2P', monospace;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.blue {
+  background-color: #007bff;
+  color: white;
+}
+
+button.red {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.orange {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Rodapé de controles */
+.controls {
+  margin-top: 20px;
+}
+
+.card.spade {
+  color: black;
+}
+
+.card.club {
+  color: blue;
+}
+
+.card.heart {
+  color: red;
+}
+
+.card.diamond {
+  color: yellow;
+}
+
+.card.heart, .card.diamond {
+  background-color: #c7c7c7;
+}
+
+.card.spade, .card.club {
+  background-color: #c7c7c7;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Balatro Multiplayer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <h1 style="margin-bottom: 20px;">Balatro Multiplayer</h1>
+
+    <input type="text" id="nome" placeholder="Seu nome" />
+    <br><br>
+
+    <button id="criarBtn" class="blue">Criar Sala</button>
+    <br><br>
+
+    <input type="text" id="salaId" placeholder="Código da sala" maxlength="5" />
+    <br><br>
+
+    <button id="entrarBtn" class="orange">Entrar na Sala</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
